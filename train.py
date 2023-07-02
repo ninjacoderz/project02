@@ -20,7 +20,7 @@ def set_args():
     parser = argparse.ArgumentParser(description='Set arguments')
     parser.add_argument('--data_dir', default='flowers', type=str, help='data directory')
     parser.add_argument('--arch', default='densenet', help='pretrained model architectures, options: vgg, densenet, alexnet')
-    parser.add_argument('--hidden_units', default=[512], type=list, help='hidden layer architecture')
+    parser.add_argument('--hidden_units', default=[512], type=int, nargs='*', help='hidden layer architecture')
     parser.add_argument('--learning_rate', default=0.001, type=float, help='learning rate')    
     parser.add_argument('--epochs', default=10, type=int, help='training epochs')
     parser.add_argument('--save_dir', default='', type=str, help='save directory')
