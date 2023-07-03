@@ -47,7 +47,7 @@ def process_image(image):
     # TODO: Process a PIL image for use in a PyTorch model
     pil_image = Image.open(image)
     
-    size = np.max(pil_image.size)*256/np.min(pil_image.size)
+    size = np.max(pil_image.size)*256 / np.min(pil_image.size)
     pil_image.thumbnail((size,size))
     pil_image = pil_image.crop((16, 16, 240, 240))
     np_image = np.array(pil_image)/225
